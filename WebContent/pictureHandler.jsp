@@ -19,9 +19,6 @@ try {
 	rs = stmt.executeQuery("SELECT * FROM public.pics;");
 }catch(SQLException e){
 	e.printStackTrace();
-}catch(NullPointerException e){
-	out.println("Възникна грешка при изпълнението на заявката " + e.getMessage());
-	e.printStackTrace();
 }finally {
 	if(conn != null){
 		conn.close();
